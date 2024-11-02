@@ -90,16 +90,15 @@ int IdentifyParser::GetIndexOfMsSetBit(unsigned char byte)
 bool IdentifyParser::CheckIfWords85To87Valid(unsigned char word)
 {
 	unsigned char mask{ 0b1000'0000 };
-	auto is_bit_15_cleared{ !(word & mask) };
 	auto is_bit_14_set{ word & (mask >> 1) };
+	auto is_bit_15_cleared{ !(word & mask) };
 	return is_bit_14_set && is_bit_15_cleared;
 }
 
-
-std::unique_ptr<char[]> IdentifyParser::ReadWordsFromFile(int word_position, int word_length)
+std::unique_ptr<char[]> IdentifyParser::ReadWordsFromFile(int word_position, int word_count)
 {
 	 const auto kBytePosition{ word_position << 1 };
-	 const auto kByteLength{ word_length << 1 };
+	 const auto kByteLength{ word_count << 1 };
 	 auto read_buffer = std::make_unique<char[]>(kByteLength);
 	 // move current read position in the stream:
 	 input_file_.seekg(kBytePosition, std::ios::beg);

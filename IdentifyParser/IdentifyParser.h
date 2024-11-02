@@ -21,7 +21,7 @@ private:
 	bool CheckIfWords85To87Valid(unsigned char word);
 
 	std::string TrimPaddingSpaces(std::string& str);
-	std::unique_ptr<char[]> ReadWordsFromFile(int word_position, int word_length);
+	std::unique_ptr<char[]> ReadWordsFromFile(int word_position, int word_count);
 
 	int GetIndexOfMsSetBit(unsigned char byte);
 
