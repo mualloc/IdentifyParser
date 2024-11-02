@@ -13,3 +13,11 @@ project ("IdentifyParser")
 
 # Include sub-projects.
 add_subdirectory ("IdentifyParser")
+
+add_executable (IdentifyParser "main.cpp")
+
+target_link_libraries(IdentifyParser PRIVATE IdentifyParserLib)
+
+if (CMAKE_VERSION VERSION_GREATER 3.12)
+  set_property(TARGET IdentifyParser PROPERTY CXX_STANDARD 17)
+endif()

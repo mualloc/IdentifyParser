@@ -14,13 +14,13 @@ IdentifyParser::IdentifyParser(std::string_view input_file_name) : input_file_na
 	}
 }
 
-IdentifyDeviceData IdentifyParser::ProcessInputFile()
+std::unique_ptr<IdentifyDeviceData> IdentifyParser::ProcessInputFile()
 {
 	input_file_.open(input_file_name_.data(), std::ios::binary | std::ios::in);
 	if (!input_file_) {
 		throw std::runtime_error("Could not open input file!");
 	}
-	return IdentifyDeviceData{ GetModelNumber() , GetHighestSupportedUltraDmaMode(), GetSmartSelfTestSupported() };
+	return std::make_unique<IdentifyDeviceData>(GetModelNumber(), GetHighestSupportedUltraDmaMode(), GetSmartSelfTestSupported());
 }
 
 std::string IdentifyParser::GetModelNumber()
