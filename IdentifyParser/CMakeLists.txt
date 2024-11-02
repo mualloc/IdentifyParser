@@ -1,0 +1,12 @@
+﻿# CMakeList.txt : CMake project for IdentifyParser, include source and define
+# project specific logic here.
+#
+
+# Add source to this project's executable.
+add_executable (IdentifyParser "IdentifyParser.cpp" "IdentifyParser.h")
+
+if (CMAKE_VERSION VERSION_GREATER 3.12)
+  set_property(TARGET IdentifyParser PROPERTY CXX_STANDARD 17)
+endif()
+
+# TODO: Add tests and install targets if needed.
