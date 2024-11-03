@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "IdentifyParserInstaller", "IdentifyParserInstaller\IdentifyParserInstaller.vdproj", "{B3952EDD-A81B-45DF-A609-FA4C28A76F06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3952EDD-A81B-45DF-A609-FA4C28A76F06}.Debug|Default.ActiveCfg = Debug
+		{B3952EDD-A81B-45DF-A609-FA4C28A76F06}.Debug|Default.Build.0 = Debug
+		{B3952EDD-A81B-45DF-A609-FA4C28A76F06}.Release|Default.ActiveCfg = Release
+		{B3952EDD-A81B-45DF-A609-FA4C28A76F06}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {563EC426-2E5C-4E0C-B695-3387FA7826CC}
+	EndGlobalSection
+EndGlobal
